@@ -8,18 +8,22 @@ public class RomanNumeralsTest {
 	@Test
 	public void should_return_I_when_1 () {
 		//Given
-		String input = "1";
-		String expected = "I";
+		String input = "I";
+		String expected = "1";
 		RomanNumerals romanNumeral = new RomanNumerals();
 		//When
-		String actual = romanNumeral.convertToRoman(input);
+		String actual = romanNumeral.convertFromRoman(input);
 		//Then
 		Assert.assertEquals(expected, actual);
 	}
 	public void should_return_I_when_2 () {
+		//Given
 		String input = "2";
-		String expected="II";
+		String expected = "II";
 		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertToRoman(input);
+		//Then
 		Assert.assertEquals(expected, actual);
 	}
 	
